@@ -103,7 +103,8 @@ search.addEventListener("click", handleSearch);
 
 const searchfield = document.querySelector("#search");
 
-searchfield.addEventListener("keyup", handleSearch);function handleSearch() {
+searchfield.addEventListener("keyup", handleSearch);
+function handleSearch() {
     console.log(this.value);
     searchContainer.innerHTML = this.value;
 }
