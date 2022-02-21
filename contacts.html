@@ -14,17 +14,17 @@
         <form id="contactForm">
         <div>
             <label>
-                First name
-                <input name ="firstname" id="firstname"/>
+                First name (required)
+                <input name ="firstname" id="firstName"/>
             </label>
             <div class="form-error" id="firstNameError">Please enter your first name</div>
         </div>  
         <div> 
             <label>
                 Subject
-                <input type="text">
+                <input type="text" id="subject">
             </label>
-            <div class="form-error" id="lastNameError">Your last name must be at least 4 characters</div>
+            <div class="form-error" id="subjectError">this subject text field requires a minimum lenght of 10</div>
           </div>
           <div>
             <label>
@@ -35,14 +35,15 @@
         </div>
         <div>
             <label>
-                Adress
-                <input name="adress" id="adress" />
+                Address
+                <input name="address" id="address" />
             </label>
-            <div class="form-error" id="emailError">The adress must have a minimum lenght of 25</div>
+            <div class="form-error" id="addressError">The adress must have a minimum lenght of 25</div>
         </div>
             <button>Submit</button>
         </div>
     </form>
     </div>
 </body>
+<script src="contact.js"></script>
 </html>
