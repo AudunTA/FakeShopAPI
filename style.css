@@ -1,0 +1,170 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+  }
+.wrapper {
+  margin:auto;
+  max-width: 500px;
+     border: solid;
+}
+.container {
+  margin:auto;
+       max-width: 470px;
+    justify-content: center;
+
+    
+    display:flex;
+    flex-wrap: wrap;
+}
+.button2:hover {
+
+    background-color: gray; /* Green */
+    color: white;
+  
+}
+
+.item {
+    text-align: center;
+    margin: 5px;
+    max-width: 200px;
+    
+}
+
+#product-img {
+    width: 100px;
+}
+
+header {
+    font-size: 0.7em;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    background: #ffffff;
+
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding); 
+}
+body .button {
+    width: 100px;
+    height: 20px;
+}
+.buttonContainer {
+    text-align: center;
+    width: 100%;
+}
+.loading {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+.loading div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #f28df2;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #f28df2 transparent transparent transparent;
+  }
+  .loading div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .loading div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .loading div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+ 
+  .button2 {
+    
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    width: 120px;
+    color: black;
+  } 
+  .toggle {
+    
+    background-color: black;
+    color: white;
+  }
+  .navigation {
+    width: 100%;
+    background-color: #f28df2;
+    display: flex;
+ 
+  }
+  .menuOptions {
+    display: flex;
+    margin-left: auto;
+    
+  }
+  #contactB {
+    margin-right: 10px;
+  }
+
+form {
+  padding: 2em;
+  background: white;
+  border-radius: 1rem;
+}
+input {
+  width: 100%;
+  margin-top: 2px;
+  padding: 10px;
+  font-size: 16px;
+}
+button {
+  background: rgb(11, 91, 133);
+  border: none;
+  width: 200px;
+  padding: 1rem;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+.formWrapper {
+  margin: auto;
+  width: 400px;
+}
+
+.form-error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+.validationMessage {
+  color: green;
+}
+footer {
+  width: 100%;
+  height: 20px;
+  background-color: #f28df2;
+}
+.searchbar {
+  display: flex;
+}
+.fa-solid {
+
+  margin-top: auto;
+  margin-bottom: auto;
+}

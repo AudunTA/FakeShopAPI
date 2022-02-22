@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/5386c22845.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+
+    <div class="navigation">
+        <div class="searchbar">
+            <input type="text" placeholder="Search" id="search" name="search"><i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="menuOptions">
+      <a href="contacts.html"><h2 id="contactB">Contact</h2></a>
+      <a href="index.html"><h2>Home</h2></a></div>
+    </div>
+    <div class="searchContainer"></div>
+</header>
+<body>
+    <div class="formWrapper"><div class="validationMessage"></div>
+        <form id="contactForm">
+        <div>
+            <label>
+                First name (required)
+                <input name ="firstname" id="firstName"/>
+            </label>
+            <div class="form-error" id="firstNameError">Please enter your first name</div>
+        </div>  
+        <div> 
+            <label>
+                Subject
+                <input type="text" id="subject">
+            </label>
+            <div class="form-error" id="subjectError">this subject text field requires a minimum lenght of 10</div>
+          </div>
+          <div>
+            <label>
+                Email
+                <input name="email" id="email" />
+            </label>
+            <div class="form-error" id="emailError">Please enter a valid email address</div>
+        </div>
+        <div>
+            <label>
+                Address
+                <input name="address" id="address" />
+            </label>
+            <div class="form-error" id="addressError">The adress must have a minimum lenght of 25</div>
+        </div>
+        
+            <button>Submit</button>
+        </div>
+    </form>
+    </div>
+</body>
+<script src="contact.js"></script>
+</html>
