@@ -29,7 +29,7 @@ function handleSubmit(event) {
         emailError.style.display = "none";
 
     } else {
-        emailError.innerHTML = `Please enter a valid email address`;
+        emailError.innerHTML = `Please enter a valid email address.`;
         emailError.style.display = "block";
         if(email.value.length > 1) {
         const findError = findEmailError(email.value);
@@ -71,10 +71,12 @@ function findEmailError(email) {
         returnString ="";
         illegalCharacters ="";
     for(let i = 0; i <email.length; i++) {
-        const regTest = /^[a-zA-Z0-9._%-@]/;
-        if(!regTest.test(email[i])) {
-            const string = "invalid character(s):"    
-            illegalCharacters += `${email[i]}`;
+        const regTest = /^[a-zA-Z0-9@._%-]/;
+        console.log("\\" + email[i]);
+        if(!regTest.test(("\\" + email[i])[1])) {
+            const string = "invalid character(s):" 
+            illegalCharacters += `${String(email[i])}`;
+            
             returnString = `${string} ${illegalCharacters} `;
         }
     } return returnString;

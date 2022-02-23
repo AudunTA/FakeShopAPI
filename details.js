@@ -10,7 +10,7 @@ async function displaySingleProduct() {
     const response = await fetch(url+id);
     const result = await response.json();
     console.log(result);
-    container.innerHTML = `<div class="item" id ="${result.id}"><h2>${result.title}</h2><img src ="${result.image}" id="product-img"><p>price: ${result.price}</p></div></a>`;
+    container.innerHTML = `<div class="item" id ="${result.id}"><h2>${result.title}</h2><img src ="${result.image}" id="product-img"> <p> ${result.description} </p> <h2> ${result.category}</h2><p>price: ${result.price}</p></div></a>`;
 }catch {
 
 }

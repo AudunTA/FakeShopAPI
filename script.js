@@ -1,3 +1,8 @@
+let string = "hei";
+string = string+"&";
+console.log(string);
+
+
 const url = "https://fakestoreapi.com/products/";
 const container = document.querySelector(".container");
 const buttons = document.querySelectorAll("button");
@@ -43,7 +48,7 @@ async function displayProducts() {
         } else 
         {
             for (let i = 0; i < result.length; i++) {
-                if (i === 4) {
+                if (i === 6) {
                     break;
                 }
 
