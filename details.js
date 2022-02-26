@@ -10,8 +10,11 @@ async function displaySingleProduct() {
     const response = await fetch(url+id);
     const result = await response.json();
     console.log(result);
-    container.innerHTML = `<div class="item" id ="${result.id}"><h2>${result.title}</h2><img src ="${result.image}" id="product-img"> <p> ${result.description} </p> <h2> ${result.category}</h2><p>price: ${result.price}</p></div></a>`;
-}catch {
+    console.log(result.rating.rate);
+    container.innerHTML = `<div class="itemDetails" id ="${result.id}"><div><img src ="${result.image}" id="product-imgDetails"></div><div class="flex-items"><h2>${result.title}</h2> <p> ${result.description} </p> <h2> ${result.category}</h2><p>${result.price}$
+    <p>rating: ${result.rating.rate} out of ${result.rating.count} ratings</div></div></a>`;
+}catch(e) {
+    container.innerHTML = `There was an error while calling the API with the following error message: ${e}`;
 
 }
     }
