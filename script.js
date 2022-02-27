@@ -74,9 +74,9 @@ function createHTML(title, id, price, img) {
 
 function makeDots(title) {
     let string = "";
-    for (let i = 0; i <= 24; i++) {
+    for (let i = 0; i <= 22; i++) {
         string += title[i];
-        if (i === 24) {
+        if (i === 22) {
             string = string + "...";
         }
     }

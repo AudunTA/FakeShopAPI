@@ -26,7 +26,9 @@
 .item {
     text-align: center;
     margin: 50px;
-    max-width: 200px; 
+    max-width: 200px;
+    border: solid;
+    height: 340px; 
 }
 @media only screen and (max-width: 1215px) {
 .item {
@@ -57,6 +59,7 @@
   --main-padding: 5px;
 }
 body {
+  font-family: 'Montserrat', sans-serif;
   padding:0px;
   margin: 0px;
 }
@@ -71,6 +74,7 @@ body {
   padding: 12px;
   min-width: 100%;
   height: 50px;
+  font-family: 'Montserrat', sans-serif;
 }
 .fa-arrow-up {
   float: right;
@@ -81,7 +85,9 @@ body {
 
 .header-navigation {
   float: right;
+  padding-top: 20px;
   padding-right: 70px;
+
 }
 .header-container {
   float: left;
@@ -90,6 +96,8 @@ body {
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
   padding-left: 10px;
+  text-decoration: none;
+  color: black;
 }
 body .button {
     width: 100px;
@@ -145,7 +153,7 @@ body .button {
     font: inherit;
     cursor: pointer;
     outline: inherit;
-    width: 120px;
+    width: 140px;
     color: black;
   } 
   .toggle {
