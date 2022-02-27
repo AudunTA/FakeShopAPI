@@ -45,9 +45,10 @@
 }
 
 .itemDetails {
-  padding-top: 50%;
+  justify-content: center;
     margin: auto;
   display: flex;
+
 }
 .flex-items {
   width: 300px;
@@ -221,11 +222,31 @@ button {
   margin-bottom: auto;
 }
 .page-container {
+ position: relative;
+  min-height: 100vh; 
+}
+
+  
+.page-containerDetails {
   position: relative;
-  min-height: 90vh;
+  min-height: 100vh;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+
+}
+.page-containerContact {
+  padding-top: 100px;
+  max-width: 500px;
 }
 .wrapper {
   padding-bottom: 2.5rem; 
+}
+.wrapper-details {
+  padding-top: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+
 }
 footer {
   background-color: #f28df2;
