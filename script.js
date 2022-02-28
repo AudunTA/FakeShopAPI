@@ -11,10 +11,9 @@ async function displayProducts() {
         const queryString = document.location.search;
         const params = new URLSearchParams(queryString);
         let filterBy = params.get("filterBy");
-        console.log(filterBy);
         const response = await fetch(url);
         const result = await response.json();
-        console.log(result);
+
         if (filterBy === "Men") {
             buttons[0].classList.add('toggle');
             filterBy = "men's clothing";
@@ -23,13 +22,14 @@ async function displayProducts() {
             buttons[1].classList.add('toggle');
             filterBy = "women's clothing";
         }
+        //if a filter is activated, run this
         if (filterBy != null) {
             let count = 0;
             for (let i = 0; i < result.length; i++) {
                 if (result[i].category === filterBy) {
                     count++;
                     let title = result[i].title;
-                    if (title.length > 30) {
+                    if (title.length > 27) {
                         title = makeDots(title);
                     }
                     const id = result[i].id;
@@ -42,15 +42,15 @@ async function displayProducts() {
       
                 }
             }
-        } else 
-        {
+        } else {
+            //this will run if there is no filter pressed
             for (let i = 0; i < result.length; i++) {
                 if (i === 4) {
                     break;
                 }
 
                 let title = result[i].title;
-                if (title.length > 30) {
+                if (title.length > 27) {
                     title = makeDots(title);
                 }
 
@@ -69,7 +69,6 @@ displayProducts();
 function createHTML(title, id, price, img) {
     loading.innerHTML = "";
     container.innerHTML += `<a href="details.html?id=${id}"><div class="item" id ="${id}"><h2>${title}</h2><img src ="${img}" id="product-img"><p>price: ${price}$</p></div></a>`;
-    makeClick();
 }
 
 function makeDots(title) {
@@ -84,20 +83,11 @@ function makeDots(title) {
 }
 
 
-function makeClick() {
-      const products = document.querySelectorAll(".item");
-      for(let i = 0; i < products.length; i++) {
 
-            console.log(products.length);
-            products[i].addEventListener("click", eventClick);
-      }
 
-}
 
-function eventClick() {
-    console.log(this.id);
-}
 
+//decided to not add my search function
 // const search = document.querySelector(".fa-solid");
 // const searchContainer = document.querySelector(".searchContainer");
 // search.addEventListener("click", handleSearch);
@@ -130,13 +120,14 @@ const header = document.querySelector(".header");
 const logo = document.querySelector(".header-container");
 const navigation = document.querySelector(".header-navigation");
 const arrowUp = document.querySelector(".fa-arrow-up");
+// arrowup icon when pressed will take you to the top of the page
 arrowUp.onclick = function() {
     window.scrollTo(0, 0);
 }
 document.addEventListener('scroll', handleScroll);
 
 function handleScroll() {
-    console.log(window.scrollY);
+
     if(window.scrollY > 90) {
         header.style.background = "rgb(129,157,189, 0)";
         navigation.style.display = "none";

@@ -15,6 +15,7 @@ form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault();
+    //sending firstname value // the lenght i will check with
     if(checkLen(firstName.value, 0) === true) {
         firstNameError.style.display = "none";
     } else{
@@ -61,12 +62,13 @@ function validateEmail(email) {
     const regEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
     const matching = regEx.test(email);
     console.log(matching);
-    
+    //returns true or false
     return matching;
 
 }
 let returnString = "";
 let illegalCharacters = "";
+//function for checking invalid characters in the email
 function findEmailError(email) {
         returnString ="";
         illegalCharacters ="";

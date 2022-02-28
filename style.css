@@ -76,6 +76,7 @@ body {
   min-width: 100%;
   height: 50px;
   font-family: 'Montserrat', sans-serif;
+  transition: all .2s ease;
 }
 .fa-arrow-up {
   float: right;
